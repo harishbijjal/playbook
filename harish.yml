@@ -1,0 +1,10 @@
+---
+- hosts: vithal
+  become_user: true
+  gather_facts: true
+  connection: ssh
+  tasks:
+    - name: i am creating file 
+      file: path=/opt/raviteja.txt state=touch
+    - name: i aminstalling package
+      apt: name=maven state=present

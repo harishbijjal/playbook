@@ -1,0 +1,15 @@
+---
+- hosts: localhost
+  gather_facts: true
+  connection: ssh
+  become_user: true
+  tasks: 
+    - name: creating a file
+      file: path=/opt/some.txt state=touch
+      tags:
+        - file
+    - name: download packages
+      apt: name=maven  state=present
+      tags:
+        - package
+  

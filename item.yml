@@ -1,0 +1,15 @@
+---
+- hosts: localhost
+  gather_facts: true
+  become_user: true
+  connection: ssh
+  tasks:
+    - name: using items moduke
+      file: path=/opt/{{ item }} state=touch
+      with_items:
+        - a.txt 
+        - b.txt
+    - name: installing jdk
+      apt: name=nginx state=present
+      async: 30
+      poll: 1

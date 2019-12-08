@@ -1,0 +1,1 @@
+{"invocation": {"module_args": {"dpkg_options": "force-confdef,force-confold", "upgrade": null, "force": false, "name": "nginx", "package": ["nginx"], "purge": false, "state": "present", "update_cache": false, "default_release": null, "install_recommends": null, "deb": null, "cache_valid_time": null}}, "changed": false, "cache_update_time": 0, "cache_updated": false}

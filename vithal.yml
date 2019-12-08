@@ -1,0 +1,12 @@
+---
+- hosts: vithal
+  become_user: true
+  gather_facts: true
+  connection: ssh
+  vars_prompt:
+    - name: package
+      prompt: enter the package
+  tasks: 
+    - name: install the packages
+      apt: name='{{package}}' state=present
+
